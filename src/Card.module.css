@@ -1,0 +1,110 @@
+.card{
+    width: 343px;
+    height: 498px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__header{
+    width: 100%;
+    height: 212px;
+    position: relative;
+
+}
+
+.card__img{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.card__heart{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.card__raiting{
+    display: none;
+}
+
+.card__name{
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    margin: 5px 0;
+}
+
+.card__otherInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.card__brand{
+    display: flex;
+}
+
+.card__brandName{
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 21px;
+    color: #8E8E8E;
+}
+
+.card__brandValue{
+    font-size: 14px;
+    line-height: 21px;
+    color: #1C1C1C;
+}
+.card__article{
+    display: flex;
+}
+
+.card__articleName{
+    margin: 0;
+    font-size: 14px;
+    line-height: 21px;
+    color: #8E8E8E;
+}
+.card__articleValue{
+    font-size: 14px;
+    line-height: 21px;
+    color: #1C1C1C;
+}
+.card__caption{
+    max-height: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+}
+
+.card__captionName{
+    font-size: 12px;
+    line-height: 18px;
+    color: #8E8E8E;
+}
+.card__captionCount
+
+.card__captionCountLogo{
+    max-width: 18px;
+    max-height: 18px;
+    box-sizing: border-box;
+}
+.card__captionCountValue{
+    font-size: 12px;
+    line-height: 18px;
+}
+.card__captionCountValueText{
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+
+}
