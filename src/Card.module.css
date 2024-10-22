@@ -43,6 +43,8 @@
 .card__raiting{
     height: 18px;
     margin: 12px 0;
+    background-image: url(../public/ratDesktop.png);
+    background-repeat: no-repeat;
 }
 
 .card__name{
@@ -222,6 +224,8 @@
 
     .card__raiting{
         margin: 10px 0;
+        background-image: url(../public/ratMobile.png);
+        
     }
 
     .card__name{
