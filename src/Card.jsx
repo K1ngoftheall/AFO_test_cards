@@ -1,12 +1,17 @@
 import classes from "./Card.module.css";
+import {useState} from "react";
 
 export default function Card({
   // eslint-disable-next-line react/prop-types
   card: { id, name, price, haveUser,  haveStore, brand, article, discount},
 }) {
-
-
-
+  const [count, setCount] = useState(Number(haveUser));
+  const increaseCounter = () => {
+    setCount(count + 1);
+ }
+ const deccreaseCounter = () => {
+  setCount(count - 1);
+}
 
   return (
     <li className={classes.card}>
@@ -42,15 +47,15 @@ export default function Card({
         </div>
       </div>
 
-      {haveUser ? (
+      {count ? (
         <div className={classes.card__priceContainer}>
         <span className={classes.card__binPriceDiscount}>{price*(discount / 100)}Р</span>
         <div className={classes.card__binPriceCounter}>
-          <button className={classes.card__increase}><img src="../public/minus.png" alt="" /></button>
-          <span className={classes.card__binHaveUser}>{haveUser}</span>
-          <button className={classes.card__decrease}><img src="../public/plus.png" alt="" /></button>
+          <button className={classes.card__counterButton}  onClick={deccreaseCounter}><img src="../public/minus.png" alt="" /></button>
+          <span className={classes.card__binHaveUser}>{count}</span>
+          <button className={classes.card__counterButton} onClick={increaseCounter}><img src="../public/plus.png" alt="" /></button>
         </div>
-        <img src="../public/binLogo.png" alt="" />
+        <img src="../public/binLogo.png" alt="" className={classes.card__bin}/>
       </div>
         
       ) : (

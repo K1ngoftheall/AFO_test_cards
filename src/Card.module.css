@@ -92,6 +92,7 @@
     line-height: 21px;
     color: #1C1C1C;
 }
+
 .card__caption{
     margin: 12px 0;
     border-bottom: 1px solid #D9D9D9;
@@ -177,11 +178,11 @@
     margin: 0 10px;
     border: 1px solid #D9D9D9;
     border-radius: 5px;
-
     max-width: 93px;
     width: 100%;
 }
-.card__increase{
+.card__counterButton{
+    border: none;
     color: #000;
     background-color: #fff;
     padding: 0;
@@ -194,8 +195,107 @@
     line-height: 21px;
 
 }
-.card__decrease{
-    color: #000;
-    background-color: #fff;
-    padding: 0;
+
+.card__bin{
+    max-width: 38px;
+    max-height: 38px;
+}
+
+@media screen and (max-width: 900px) {
+
+    .card{
+        width: 162px;
+        height: 307px;
+        background-color: #ededed;
+    }
+
+    .card__main{
+        margin: 0;
+    }
+
+    .card__header{
+        width: 100%;
+        height: 160px;
+        position: relative;
+    
+    }
+
+    .card__raiting{
+        margin: 10px 0;
+    }
+
+    .card__name{
+        font-size: 10px;
+        line-height: 18px;
+        font-weight: 600;
+        margin: 0;
+    }
+    
+    .card__otherInfo{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .card__brandName{
+        display: none;
+    }
+    
+    .card__brandValue{
+        margin: 0;
+        font-size: 10px;
+        line-height: 18px;
+        font-weight: 600;
+    }
+    
+    .card__articleName{
+        display: none;
+    }
+
+    .card__articleValue{
+        margin: 0;
+        font-size: 10px;
+        line-height: 18px;
+        font-weight: 600;
+        color: #8E8E8E;
+    }
+
+    .card__caption{
+        margin: 5px 0;
+    }
+
+    .card__priceContainer{
+        justify-content: space-around;
+    }
+    
+    .card__priceDiscount{
+        color: #E53B35;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 21px;
+    }
+    
+    .card__Discount{
+       display: none;
+    }
+    
+    .card__price{
+        text-decoration: line-through;
+    }
+    
+    .card__binPriceDiscount{
+        color: #E53B35;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 21px;
+    
+    }
+    .card__binPriceCounter{
+        display: none;
+    }
+
+    .card__bin{
+        max-width: 24px;
+        max-height: 24px;
+    }
+
 }
