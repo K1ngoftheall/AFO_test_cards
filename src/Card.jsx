@@ -17,8 +17,8 @@ export default function Card({
     <li className={classes.card}>
       <div className={classes.card__main}>
       <div className={classes.card__header}>
-       <img src="../public/motor.png" alt="картинка"  className={classes.card__img}/>
-       <img src="../public/heart.png" alt="лайк"  className={classes.card__heart}/>
+       <img src="./images/motor.png" alt="картинка"  className={classes.card__img}/>
+       <img src="./images/heart.png" alt="лайк"  className={classes.card__heart}/>
       </div>
 
       <div className={classes.card__raiting}></div>
@@ -39,7 +39,7 @@ export default function Card({
       <div className={classes.card__caption}>
         <p className={classes.card__captionName}>Цена за шт</p>
         <div className={classes.card__captionCount}>
-          <img src="../public/homeLogo.png" alt="склад" className={classes.card__captionCountLogo}/>
+          <img src="./images/homeLogo.png" alt="склад" className={classes.card__captionCountLogo}/>
           <div className={classes.card__captionCountValue}>
             {haveStore}
             <p className={classes.card__captionCountValueText}>шт</p>
@@ -51,11 +51,11 @@ export default function Card({
         <div className={classes.card__priceContainer}>
         <span className={classes.card__binPriceDiscount}>{price*(discount / 100)}Р</span>
         <div className={classes.card__binPriceCounter}>
-          <button className={classes.card__counterButton}  onClick={deccreaseCounter}><img src="../public/minus.png" alt="" /></button>
+          <button className={classes.card__counterButton}  onClick={deccreaseCounter}><img src="./images/minus.png" alt="" /></button>
           <span className={classes.card__binHaveUser}>{count}</span>
-          <button className={classes.card__counterButton} onClick={increaseCounter}><img src="../public/plus.png" alt="" /></button>
+          <button className={classes.card__counterButton} onClick={increaseCounter}><img src="./images/plus.png" alt="" /></button>
         </div>
-        <img src="../public/binLogo.png" alt="" className={classes.card__bin}/>
+        <img src="./images/binLogo.png" alt="" className={classes.card__bin}/>
       </div>
         
       ) : (
