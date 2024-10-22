@@ -3,6 +3,7 @@ import Card from "./Card";
 
 import classes from "./TableProducts.module.css";
 
+// eslint-disable-next-line react/prop-types
 function TableProducts({ cards, loaded }) {
   return (
     <div className={classes.main}>

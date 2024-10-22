@@ -2,7 +2,7 @@ import classes from "./Card.module.css";
 
 export default function Card({
   // eslint-disable-next-line react/prop-types
-  card: { id, name, price, haveUser,  haveStore, brand, article},
+  card: { id, name, price, haveUser,  haveStore, brand, article, discount},
 }) {
 
 
@@ -10,6 +10,7 @@ export default function Card({
 
   return (
     <li className={classes.card}>
+      <div className={classes.card__main}>
       <div className={classes.card__header}>
        <img src="../public/motor.png" alt="картинка"  className={classes.card__img}/>
        <img src="../public/heart.png" alt="лайк"  className={classes.card__heart}/>
@@ -33,32 +34,33 @@ export default function Card({
       <div className={classes.card__caption}>
         <p className={classes.card__captionName}>Цена за шт</p>
         <div className={classes.card__captionCount}>
-          <img src="" alt="" className={classes.card__captionCountLogo}/>
-          <span className={classes.card__captionCountValue}>
+          <img src="../public/homeLogo.png" alt="склад" className={classes.card__captionCountLogo}/>
+          <div className={classes.card__captionCountValue}>
             {haveStore}
             <p className={classes.card__captionCountValueText}>шт</p>
-          </span>
+          </div>
         </div>
       </div>
 
       {haveUser ? (
-        <div>
-        <span>{price}</span>
-        <div>
-          <button></button>
-          <span>{haveUser}</span>
-          <button></button>
+        <div className={classes.card__priceContainer}>
+        <span className={classes.card__binPriceDiscount}>{price*(discount / 100)}Р</span>
+        <div className={classes.card__binPriceCounter}>
+          <button className={classes.card__increase}><img src="../public/minus.png" alt="" /></button>
+          <span className={classes.card__binHaveUser}>{haveUser}</span>
+          <button className={classes.card__decrease}><img src="../public/plus.png" alt="" /></button>
         </div>
-        <img src="" alt="" />
+        <img src="../public/binLogo.png" alt="" />
       </div>
         
       ) : (
-        <div>
-          <span>{price}</span>
-          <span></span>
-          <span></span>
+        <div className={classes.card__priceContainer}>
+          <span className={classes.card__priceDiscount}>{price*(discount / 100)}Р</span>
+          <span className={classes.card__Discount}>-{discount}%</span>
+          <span className={classes.card__price}>{price}Р</span>
         </div>  
       )}
+      </div>
     </li>
   );
 }
