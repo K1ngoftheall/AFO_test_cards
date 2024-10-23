@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import items from "./data/data.json";
 import TableProducts from "./TableProducts";
 import classes from "./App.module.css";
@@ -24,4 +24,3 @@ function App() {
 }
 
 export default App;
-
